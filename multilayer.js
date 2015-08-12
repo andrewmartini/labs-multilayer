@@ -18,7 +18,7 @@ multilayer.controller('SelectorCtrl', function ($scope) {
             if (!show) {
                 layer.hide();
             }
-            cdb.vis.Vis.addInfowindow(map, layer.getSubLayer(0), layer.interactivity)
+            cdb.vis.Vis.addInfowindow(map, layer.getSubLayer(0), [cartodb_id'])
             cartodbLayers[id] = layer;
         };
     }
