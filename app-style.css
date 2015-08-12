@@ -23,7 +23,7 @@ label{
     color: #999;
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 0 3px;
+    margin: 0 3px 0 3px;
 }
 
 input[type=checkbox]:checked+label{
