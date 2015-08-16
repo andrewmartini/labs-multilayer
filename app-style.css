@@ -87,7 +87,7 @@ div.cartodb-zoom{
     top: 50px;
 }
 
-div.layer_selector{
+div.cartodb-layer_selector{
     position: absolute;
     right: 100px;
     top: 20px;
