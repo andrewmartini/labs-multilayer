@@ -84,12 +84,6 @@ input[type=checkbox]:checked+label{
 div.cartodb-zoom{
     position: absolute;
     right: 20px;
-    top: 50px;
-}
-
-div.cartodb-layer_selector{
-    position: absolute;
-    right: 100px;
     top: 20px;
 }
 
