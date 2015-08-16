@@ -87,6 +87,12 @@ div.cartodb-zoom{
     top: 50px;
 }
 
+div.layer_selector{
+    position: absolute;
+    right: 100px;
+    top: 20px;
+}
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x.ng-cloak {
     display: none !important;
 }
