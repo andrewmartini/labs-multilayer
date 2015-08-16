@@ -38,11 +38,12 @@ multilayer.controller('SelectorCtrl', function ($scope) {
     };
 
     cartodb.createVis('map', baseVizJsonUrl, {
-        zoom: 13,
+        zoom: 12,
         center_lat: 40.70,
         center_lon: -73.97,
         loaderControl: true,
-        zoomControl: false
+        zoomControl: false,
+        infowindow: true
     }).done(function (vis) {
         var map = vis.getNativeMap();
 
