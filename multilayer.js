@@ -18,7 +18,7 @@ multilayer.controller('SelectorCtrl', function ($scope) {
             if (!show) {
                 layer.hide();
             }
-            cdb.vis.Vis.addInfowindow(map, layer.getSubLayer(0), ['cartodb_id'])
+            cdb.vis.Vis.addInfowindow(map, layer.getSubLayer(0), ['cartodb_id', 'borocd'])
             cartodbLayers[id] = layer;
         };
     }
@@ -43,8 +43,8 @@ multilayer.controller('SelectorCtrl', function ($scope) {
         center_lon: -73.97,
         loaderControl: true,
         zoomControl: false,
-        infowindow: true,
-        layer_selector: true
+        infowindow: false,
+        layer_selector: false
     }).done(function (vis) {
         var map = vis.getNativeMap();
 
