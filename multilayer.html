@@ -13,27 +13,10 @@
     <body>
         <div id="map"></div>
 
-        <div id="selector1" ng-controller="SelectorCtrl" ng-cloak class="ng-cloak">
+        <div id="selector" ng-controller="SelectorCtrl" ng-cloak class="ng-cloak">
             <div ng-show="title" class="header">
-                <h1>Demographic Layers</h1>
-                <h2>select one</h2>
-            </div>
-            <ul>
-                <li ng-repeat="layer in layers">
-                    <table>
-                        <tr>
-                            <td><input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" /></td>
-                            <td><label>{{ layer.name }}</label></td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </div>
-
-        <div id="selector2" ng-controller="SelectorCtrl" ng-cloak class="ng-cloak">
-            <div ng-show="title" class="header">
-                <h1>Layer Type 2</h1>
-                <h2> description </h2>
+                <h1>{{ title }}</h1>
+                <h2 ng-show="description">{{ description }}</h2>
             </div>
             <ul>
                 <li ng-repeat="layer in layers">
