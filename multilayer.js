@@ -9,46 +9,6 @@ var title = getURLParameter('tt');
 var description = getURLParameter('d');
 var baseVizJsonUrl = "http://" + user + ".cartodb.com/api/v2/viz/" + uuid + "/viz.json";
 
-var multilayer = angular.module('multilayer', []);
-multilayer.controller('SelectorCtrl', function ($scope) {
-    var cartodbLayers = [];
-
-    function addLayer(id, show, map) {
-        return function (layer) {
-            if (!show) {
-                layer.hide();
-            }
-            cdb.vis.Vis.addInfowindow(map, layer.getSubLayer(0), ['cartodb_id'])
-            cartodbLayers[id] = layer;
-        };
-    }
-
-    $scope.title = title;
-    $scope.description = description;
-
-    $scope.selectedLayers = [];
-
-    $scope.layersUpdated = function (id) {
-        var layer = cartodbLayers[id];
-        if ($scope.selectedLayers[id]) {
-            layer.show();
-        } else {
-            layer.hide();
-        }
-    };
-                // Instantiate new map object, place it in 'map' element
-    //            var map = new L.Map('map', {
-  //                  center: [40.7033127,-73.979681], // New York, NY
-//                    zoom: 11,
-      //              maxZoom: 16,
-    //                minZoom: 10
-  //              });
-//
-  //              L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-//                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  //              }).addTo(map_object);
-              
-              
 // testing of adding Leaflet map layers onto html map 
                 var layer1;
                 var layer2;
@@ -116,7 +76,49 @@ multilayer.controller('SelectorCtrl', function ($scope) {
                     });
                   });
                 });
-              });                
+              }); 
+
+
+var multilayer = angular.module('multilayer', []);
+multilayer.controller('SelectorCtrl', function ($scope) {
+    var cartodbLayers = [];
+
+    function addLayer(id, show, map) {
+        return function (layer) {
+            if (!show) {
+                layer.hide();
+            }
+            cdb.vis.Vis.addInfowindow(map, layer.getSubLayer(0), ['cartodb_id'])
+            cartodbLayers[id] = layer;
+        };
+    }
+
+    $scope.title = title;
+    $scope.description = description;
+
+    $scope.selectedLayers = [];
+
+    $scope.layersUpdated = function (id) {
+        var layer = cartodbLayers[id];
+        if ($scope.selectedLayers[id]) {
+            layer.show();
+        } else {
+            layer.hide();
+        }
+    };
+                // Instantiate new map object, place it in 'map' element
+    //            var map = new L.Map('map', {
+  //                  center: [40.7033127,-73.979681], // New York, NY
+//                    zoom: 11,
+      //              maxZoom: 16,
+    //                minZoom: 10
+  //              });
+//
+  //              L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+//                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  //              }).addTo(map_object);
+              
+              
                 
     cartodb.createVis('map', baseVizJsonUrl, {
         zoom: 12,
