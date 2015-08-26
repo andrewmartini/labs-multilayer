@@ -30,6 +30,23 @@
             </ul>
         </div>
 
+        <div id="selector2" ng-controller="SelectorCtrl" ng-cloak class="ng-cloak">
+            <div ng-show="title" class="header">
+                <h1>Layer Type 2</h1>
+                <h2> description </h2>
+            </div>
+            <ul>
+                <li ng-repeat="layer in layers">
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" ng-model="selectedLayers[layer.id]" ng-change="layersUpdated(layer.id)" name="layer.id" /></td>
+                            <td><label>{{ layer.name }}</label></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+
         <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.js"></script>
         <script src="multilayer.js"></script>
