@@ -44,7 +44,7 @@ input[type=checkbox]:checked+label{
 
 .header{
     background-color: #FAFAFA;
-    padding: 15px 0 15px 15px;
+    padding: 5px 0 5px 10px;
     margin: 0;
     border-bottom: 1px solid rgba(0,0,0,0.10);
     -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px;
