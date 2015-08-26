@@ -7,12 +7,12 @@ body{
 }
 
 h1{
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 400;
 }
 
 h2{
-    font-size: 15px;
+    font-size: 13px;
     margin: 10px 0 0 0;
     font-weight: 300;
     color: #999;
@@ -53,8 +53,8 @@ input[type=checkbox]:checked+label{
     position: absolute;
     top: 20px;
     left: 20px;
-    max-height: 400px;
-    width: 280px;
+    max-height: 300px;
+    width: 200px;
     webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
     -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
     box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
