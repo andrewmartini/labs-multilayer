@@ -48,7 +48,7 @@ html, body, #map {
     -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px;
 }
 
-#selector{
+#selector1{
     position: absolute;
     top: 20px;
     left: 20px;
@@ -63,17 +63,17 @@ html, body, #map {
     overflow: auto;
 }
 
-#selector ul{
+#selector1 ul{
     margin: 0 5px 8px 5px;
     padding: 5px 0 0 5px;
 }
 
-#selector ul li{
+#selector1 ul li{
     border-bottom: 1px solid rgba(0,0,0,0.15);
     padding: 5px 0 5px 0;
 }
 
-#selector ul li:last-child{
+#selector1 ul li:last-child{
     border-bottom: none;
     padding-bottom: 0;
 }
