@@ -37,28 +37,28 @@ multilayer.controller('SelectorCtrl', function ($scope) {
         }
     };
                 // Instantiate new map object, place it in 'map' element
-                var map = new L.Map('map', {
-                    center: [40.7033127,-73.979681], // New York, NY
-                    zoom: 11,
-                    maxZoom: 16,
-                    minZoom: 10
-                });
-
-                L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }).addTo(map_object);
+    //            var map = new L.Map('map', {
+  //                  center: [40.7033127,-73.979681], // New York, NY
+//                    zoom: 11,
+      //              maxZoom: 16,
+    //                minZoom: 10
+  //              });
+//
+  //              L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+//                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  //              }).addTo(map_object);
                 
                 
-//    cartodb.createVis('map', baseVizJsonUrl, {
-//        zoom: 12,
-//        center_lat: 40.70,
-//        center_lon: -73.97,
-//        loaderControl: true,
-//        zoomControl: false,
-//        infowindow: false,
-//        layer_selector: false
-//    }).done(function (vis) {
-//        var map = vis.getNativeMap();
+    cartodb.createVis('map', baseVizJsonUrl, {
+        zoom: 12,
+        center_lat: 40.70,
+        center_lon: -73.97,
+        loaderControl: true,
+        zoomControl: false,
+        infowindow: false,
+        layer_selector: false
+    }).done(function (vis) {
+        var map = vis.getNativeMap();
 
         var sql = new cartodb.SQL({user: user});
         sql.execute("SELECT name, layerorder, show, viz_json as vizjson, sql, cartocss, interactivity, sql_user FROM " + table + " WHERE name IS NOT NULL ORDER BY layerorder ASC")
